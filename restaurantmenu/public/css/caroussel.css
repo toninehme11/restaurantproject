@@ -1,0 +1,107 @@
+body {
+  background: #ddd !important;
+}
+/* Override any container or row padding or margin */
+.about-menu .container-fluid {
+  padding-left: 0px  !important;
+  margin: 0 !important;
+}
+/* Make the carousel responsive */
+.carousel {
+  max-height: 500px; /* Adjust the maximum height as needed */
+  padding-right: 0px;
+    margin-top: -20px;
+    margin-left: 0px;
+  /* Adjust the margin as needed to separate it from the header */
+}
+
+
+.crousselImg{
+  height:400px !important;
+  width:100%;
+  object-fit: initial;
+ 
+}
+
+
+
+
+/* Style the carousel captions */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: #fff; /* Text color */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+}
+
+/* Style the slide titles and descriptions */
+.carousel-caption h3 {
+  font-size: 24px;
+}
+
+.carousel-caption p {
+  font-size: 16px;
+}
+
+
+
+
+
+/*about menu near caroussel*/
+.about-menu {
+  background: #ddd !important;
+}
+
+.about-menu h1 {
+  font-size: 42px;
+  text-align: left;
+  color: #000;
+  font-family: 'Lobster', cursive;
+  padding-right: 30px;
+  padding-left: 5%;
+  font-weight: bold;
+}
+.about-menu p {
+  font-size: 16px;
+  text-align: left;
+  color: #000;
+  font-family: 'Lobster', cursive;
+  line-height: 1.8;
+  padding-right: 30px;
+  padding-left: 5%;
+}
+
+.padder{
+  padding-right: 30px;
+  padding-left: 10%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.about-menu button {
+  font-size: 16px;
+  text-align: center;
+  color:#000 ;
+  background: #e4cece !important; 
+  font-family: 'Lobster', cursive;
+  border-radius: 30px !important;
+  padding: 10px 20px;
+  border: 2px solid #000;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+}
+
+/* Styles for extra-small screens (xs) */
+@media (max-width: 767px) {
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  }
+
+
+
+
+  }
