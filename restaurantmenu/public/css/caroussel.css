@@ -1,50 +1,373 @@
 body {
   background: #ddd !important;
 }
-/* Override any container or row padding or margin */
-.about-menu .container-fluid {
-  padding-left: 0px  !important;
-  margin: 0 !important;
+
+.about-menu{
+  margin-top: -20px !important;
 }
-/* Make the carousel responsive */
-.carousel {
-  max-height: 500px; /* Adjust the maximum height as needed */
-  padding-right: 0px;
-    margin-top: -20px;
+/**
+* Template Name: EstateAgency
+* Updated: Jul 27 2023 with Bootstrap v5.3.1
+* Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+
+  
+  /*------/ Overlay /------*/
+  .overlay-a {
+    text-decoration: none;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 27%, rgba(0, 0, 0, 0.65) 90%);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .carousel-pagination {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .carousel-pagination .swiper-pagination-bullet {
+    width: 18px;
+    height: 10px;
+    background-color: #555;
+    margin: 0 4px;
+    border-radius: 0;
+    opacity: 1;
+    transition: 0.3s;
+  }
+  
+  .carousel-pagination .swiper-pagination-bullet-active {
+    background-color: #2eca6a;
+    width: 36px;
+  }
+  
+  .nav-arrow-a {
+    text-decoration: none;
+  }
+  
+  .nav-arrow-a .owl-arrow .owl-nav {
+    font-size: 1.8rem;
+    margin-top: -110px;
+  }
+  
+  .nav-arrow-a .owl-arrow .owl-nav .owl-next {
+    margin-left: 15px;
+  }
+  
+  .nav-arrow-b .owl-arrow .owl-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.2rem;
+  }
+  
+  .nav-arrow-b .owl-arrow .owl-nav .owl-prev,
+  .nav-arrow-b .owl-arrow .owl-nav .owl-next {
+    padding: 0.7rem 1.5rem !important;
+    display: inline-block;
+    transition: all 0.6s ease-in-out;
+    color: #ffffff;
+    background-color: #2eca6a;
+    opacity: 0.9;
+  }
+  
+  .nav-arrow-b .owl-arrow .owl-nav .owl-prev.disabled,
+  .nav-arrow-b .owl-arrow .owl-nav .owl-next.disabled {
+    transition: all 0.6s ease-in-out;
+    color: #ffffff;
+  }
+  
+  .nav-arrow-b .owl-arrow .owl-nav .owl-prev:hover,
+  .nav-arrow-b .owl-arrow .owl-nav .owl-next:hover {
+    background-color: #26a356;
+  }
+  
+  .nav-arrow-b .owl-arrow .owl-nav .owl-next {
     margin-left: 0px;
-  /* Adjust the margin as needed to separate it from the header */
-}
-
-
-.crousselImg{
-  height:400px !important;
-  width:100%;
-  object-fit: initial;
+  }
  
-}
+  
+  /* Prelaoder */
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #fff;
+  }
+  
+  #preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #f2f2f2;
+    border-top: 6px solid #2eca6a;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: animate-preloader 1s linear infinite;
+  }
+  
+  @keyframes animate-preloader {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /*--------------------------------------------------------------
+  # Hero Section
+  --------------------------------------------------------------*/
+  .intro {
+    height: 400px;
+    position: relative;
+    color: #ffffff;
+  }
+  
+  .intro .swiper-pagination {
+    bottom: 50px;
+  }
+  
+  .intro .swiper-pagination .swiper-pagination-bullet {
+    width: 18px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 0;
+    opacity: 1;
+    transition: 0.3s;
+  }
+  
+  .intro .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #2eca6a;
+    width: 36px;
+  }
+  
+  .intro .intro-item {
+    padding-top: 2rem;
+  }
+  
+  .intro .carousel-item-a {
+    position: relative;
+    background-size: cover; /* This will make the image cover the entire container */
+    background-position: center; /* This will center the image */
+    background-repeat: no-repeat;
+    height: 100%; /* Set the height to 100% to cover the entire container */
+  }
+  
+  .intro .carousel-item-a.bg-image {
+    object-fit: contain;
+  }
+  
+  .intro .intro-content {
+    position: absolute;
+  }
+  
+  .intro .intro-body {
+    text-align: center !important;
+    color : #fff !important;
+
+  }
+  
+  @media (min-width: 768px) {
+    .intro .intro-body {
+      padding-left: 2rem;
+    }
+  }
+  
+  .intro .intro-body .price-a {
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    border: 2px solid #2eca6a;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  
+  .intro .spacial {
+    animation-delay: 0.2s;
+    color: #ffffff;
+  }
+  
+  .intro .intro-title-top {
+    margin-bottom: 1rem;
+    font-size: 24px;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+  }
+  
+  @media (min-width: 768px) {
+    .intro .intro-title-top {
+      font-size: 16px;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .intro .intro-title-top {
+      font-size: 16px;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  .intro .intro-title {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 28px;
+    text-transform: uppercase;
+  }
+  
+  @media (min-width: 576px) {
+    .intro .intro-title {
+      font-size: 3.5rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .intro .intro-title {
+      font-size: 3.5rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .intro .intro-title {
+      font-size: 4rem;
+    }
+  }
+  
+  .intro .intro-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  
+  @media (min-width: 768px) {
+    .intro .intro-subtitle {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .intro .intro-subtitle.intro-price {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  @media (min-width: 576px) {
+    .intro .intro-subtitle.intro-price {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .intro .intro-subtitle.intro-price {
+      padding-top: 2rem;
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .intro .intro-subtitle.intro-price {
+      padding-top: 3rem;
+    }
+  }
+  
+  /*------/ Intro Single /------*/
+  .intro-single {
+    padding: 12rem 0 3rem;
+  }
+  
+  @media (max-width: 767px) {
+    .intro-single {
+      padding-top: 9rem;
+    }
+  }
+  
+  .intro-single .title-single-box {
+    padding: 1rem 0 1rem 2rem;
+  }
+  
+  .intro-single .title-single-box {
+    border-left: 3px solid #2eca6a;
+  }
+  
+  .intro-single .title-single-box .title-single {
+    font-weight: 600;
+    font-size: 2.2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .intro-single .title-single-box .title-single {
+      font-size: 2.1rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .intro-single .title-single-box .title-single {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .intro-single .breadcrumb-box {
+    padding: 1rem 0 0 0.5rem;
+  }
+  
+  .intro-single .breadcrumb {
+    background-color: transparent;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+  
 
 
 
 
-/* Style the carousel captions */
-.carousel-caption {
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  color: #fff; /* Text color */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px;
-}
 
-/* Style the slide titles and descriptions */
-.carousel-caption h3 {
-  font-size: 24px;
-}
 
-.carousel-caption p {
-  font-size: 16px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

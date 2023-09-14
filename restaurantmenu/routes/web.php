@@ -30,6 +30,18 @@ use App\Http\Controllers\EventsController;
 Route::get('/events', [EventsController::class,'index'])->name('events');
 
 
+
+
+
+
+Route::get('/test', function () {
+    return view('test');
+});
+
+
+
+
+
 ?>
 
 

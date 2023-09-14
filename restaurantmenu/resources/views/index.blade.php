@@ -23,6 +23,16 @@
         <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
 
 
+          <!-- Vendor CSS Files -->
+<link href="{{ asset('vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+
+<link href="{{ asset('vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+
+
+
+
+
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </body>
@@ -31,54 +41,35 @@
     </head>
     <body>
 
+    <div id="preloader"></div>
     @include('partials.header')
 
 
 
 
   <div class="about-menu">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-7 pl-0 pr-0"> <!-- Adjust the padding here -->
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="intro intro-carousel swiper position-relative">
 
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img src="{{ asset('img/pasta.jpg') }}" alt="..." class="crousselImg">
-                            <div class="carousel-caption d-none d-md-block">
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="{{ asset('img/burger.jpg') }}" alt="..." class="crousselImg">
-                            <div class="carousel-caption d-none d-md-block">
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="{{ asset('img/pizza.jpg') }}" alt="..." class="crousselImg">
-                            <div class="carousel-caption d-none d-md-block">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="swiper-wrapper">
 
-            <script>
-                $('.carousel').carousel({
-                    interval: 3000
-                });
-            </script>
+    <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/pasta.jpg') }})">
+           
+      </div>
+      <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/burger.jpg') }})">
+        
+      </div>
+      <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/pizza.jpg') }})">
+        
+      </div>
+    </div>
+  </div>
 
-            <div class="col-md-5 pl-0 pr-0"> <!-- Adjust the padding here -->
+  <div>
                 <h1>Welcome to restomenu</h1>
                 <p>Experience the finest culinary delights in town. Whether you're craving a sumptuous pasta, a juicy burger, or a delectable pizza, we have it all for you. Join us for an unforgettable dining experience!</p>
                 <div class="padder">
                 <button type="button" class="about-menu padder" id="view-menu-button" href="#starters-section">View Menu</button>
 
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
 
@@ -230,7 +221,14 @@ $(document).ready(function() {
 </script>
 
 
+<!-- Vendor JS Files -->
+<script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('vendor/swiper/swiper-bundle.min.js') }}"></script>
+<script src="{{ asset('vendor/php-email-form/validate.js') }}"></script>
 
+
+  <!-- Template Main JS File -->
+  <script src="{{ asset('js/main.js') }}"></script>
 
     </body>
 </html>
